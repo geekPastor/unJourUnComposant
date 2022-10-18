@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #000;
+    display: flex;
+}
+
+.hero .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero .left h2, .hero .left h1, .hero .left h3, .hero .left p, .hero .left button{
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
+
+.hero .left h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
+
+.hero .left h1{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.hero .left h1 span{
+    color: rgb(252, 194, 0);
+}
+
+.hero .left h3{
+    width: calc(100% / 4.5);
+    background: rgb(252, 194, 0);
+    padding: 5px;
+}
+
+.hero .left button {
+    width: calc(100% / 4);
+    margin-top: 30px;
+    padding: 15px 0px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: rgb(252, 194, 0);
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+}
+
+.hero .right{
+    width: 50%;
+    height: 100%;
+}
+
+.hero .right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

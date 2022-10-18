@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    box-shadow: 1px 1px 10px rgb(158, 153, 153);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1;
+    position: fixed;
+}
+
+header .logo{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+header .logo h1{
+    text-transform: uppercase;
+}
+
+header .nav__bar{
+    width: 30%;
+    height: 100%;
+}
+
+header .nav__bar .nav__list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav__bar .nav__list .nav__item{
+    display: inline-block;
+    list-style: none;
+}
+
+header .nav__bar .nav__list .nav__item .nav__lik{
+    color: #1e1d1d;
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+}
+
+header .nav__bar .nav__list .nav__item .nav__lik:hover{
+   letter-spacing: 3px;
+}
+
+.toggle_menu{
+    display: none;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: .1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.hero .text{
+    width: 45%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero .text h1, .hero .text h2, .hero .text p{
+    width: 100%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.hero .img{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px){
+    header{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+    header .nav__bar{
+        width: 100%;
+        height: auto;
+    }
+    header .nav__bar .nav__list{
+        display: none;
+        transition: display .5s ease-in;
+    }
+
+    header .nav__bar .nav__list.active{
+        height: auto;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        color: #000;
+        transition: all .5s ease-in-out;
+        z-index: 100000;
+    }
+
+    header .nav__bar .nav__list.active li{
+        margin: 10px 0;
+    }
+    .toggle_menu {
+        display: flex;
+        height: 40px;
+        width: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         cursor: pointer;
+    }
+    .toggle_menu::before,.toggle_menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: #000;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 #000;
+        transition: 1s;
+    }
+    .toggle_menu.active::before {
+        transform: translateY(0) rotate(135deg);
+    }
+    
+    .toggle_menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+      
+    }
+    
+    .toggle_menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: #000;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 1s;
+    }
+
+    .hero{
+        height: auto;
+        top: 15rem;
+    }
+
+    .hero .text{
+        width: 90%;
+    }
+
+    .hero .img{
+        width: 90%;
+    }
+    
+}
